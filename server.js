@@ -6,32 +6,18 @@ const config = require("./config");
 
 var mongoose = require("mongoose");
 
-// mongoose.connect(config.dburl, { useNewUrlParser: true }, (err) => {
-//   if (!err) {
-//     console.log("connected");
-//   } else {
-//     console.log("connection failed: " + err);
-//   }
-// });
-
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://healthcare-gibin:l3OtjHlTbv4TGW3z@healthcare.dw1gdpy.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverApi: ServerApiVersion.v1,
-});
-client.connect((err) => {
-  const collection = client.db("test").collection("devices");
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("connected");
+mongoose.connect(
+  config.dburl + "/PatientManagement",
+  { useNewUrlParser: true },
+  (err) => {
+    if (!err) {
+      console.log("connected");
+    } else {
+      console.log("connection failed: " + err);
+    }
   }
-  // perform actions on the collection object
-  client.close();
-});
+);
+
 // Starting point of the server
 function main() {
   let app = express(); // Export app for other routes to use

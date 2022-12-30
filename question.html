@@ -1,0 +1,920 @@
+<div id="main-splitpane-left" class="base-question__left-pane">
+  <section class="question-view__title-wrapper">
+    <h1 class="question-view__title">1. Health Care Service Backend</h1>
+  </section>
+  <section class="question-view__instruction">
+    <div class="candidate-rich-text">
+      <div id="2ii33jmqgb-instruction">
+        <p>You have to create an API service for Health Care Service.</p>
+
+        <p>Below are the details of the API endpoints.</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>Backend:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>These are the API endpoints</p>
+
+        <p>
+          login<br />
+          register
+        </p>
+
+        <p>
+          addPatient<br />
+          fetchSinglePatient<br />
+          editProfile<br />
+          diseases
+        </p>
+
+        <p>bookAppointment</p>
+
+        <p>fetchAppointment</p>
+
+        <p>deleteAppointment</p>
+
+        <p>singlePatientAppointment</p>
+
+        <p>getProfile</p>
+
+        <p>
+          <br />
+          Functionalities of endpoint are given below:
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>login</strong>:</p>
+
+        <p>
+          In this endpoint, you have to validate the login details of the user
+          with received parameters like uname, pwd and respond with JSON<br />
+          data object as below
+        </p>
+
+        <p>&nbsp;</p>
+
+        <table
+          align="left"
+          border="1"
+          cellpadding="1"
+          cellspacing="1"
+          style="width: 500px"
+        >
+          <thead>
+            <tr>
+              <th scope="row">Key</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">status</th>
+              <td>boolean</td>
+            </tr>
+            <tr>
+              <th scope="row">message</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">token</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">uid</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">mobile</th>
+              <td>number</td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">location</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">userName</th>
+              <td>string</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          Details about the token in the data is explained at the end of
+          question in middleware section.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>register:</strong></p>
+
+        <p>
+          In this endpoint, you will receive request parameters like email, pwd,
+          uname,&nbsp;mobile,location.
+        </p>
+
+        <p>
+          you should get these parameters and insert into the database as an
+          object which will be in the below structure.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <table align="left" border="1" cellpadding="1" cellspacing="1">
+          <thead>
+            <tr>
+              <th scope="row">Key</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">_id</th>
+              <td>mongoose.Types.ObjectId()</td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">pwd</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">userName</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">mobile</th>
+              <td>Number</td>
+            </tr>
+            <tr>
+              <th scope="row">location</th>
+              <td>string</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>Note:</strong> Storing password as plain text is not at all
+          good practice, This is all about demonstration purpose to create an
+          API.<br />
+          The general practice could be hash the password and store in the
+          database.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>addPatient</strong>:</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          In this endpoint, you will receive request parameters like fname,
+          lname, gender, dob, mobile, email, desc, userId
+        </p>
+
+        <p>
+          you should get these parameters and insert into the database as an
+          object which will be in the below structure.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <table align="left" border="1" cellpadding="1" cellspacing="1">
+          <thead>
+            <tr>
+              <th scope="row">Key</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">_id</th>
+              <td>mongoose.Types.ObjectId()</td>
+            </tr>
+            <tr>
+              <th scope="row">fname</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">lname</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">gender</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">dob</th>
+              <td>Date</td>
+            </tr>
+            <tr>
+              <th scope="row">mobile</th>
+              <td>Number</td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">desc</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">userId</th>
+              <td>string</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>fetchSinglePatient:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          In this endpoint, you will receive request parameter&nbsp;like
+          patientId.
+        </p>
+
+        <p>
+          you should get this&nbsp;parameter&nbsp;and you should query the
+          patient collections with received patientId and return the response
+          which can be&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as below.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          You use MongoDB as database and details about the required collections
+          and their&nbsp;structures are the end of the question.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <img
+            height="250"
+            src="https://hrcdn.net/s3_pub/istreet-assets/kDowuxIxXGAC8Twa2v6mFg/objectss.png"
+            style="float: left"
+            width="393"
+          />
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          After querying , if no&nbsp;match with patientId is found in database,
+          response can be an empty array too.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>editProfile:</strong><br />
+          In this endpoint, you will receive request parameters like email,
+          mobile, location, uid.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          Fetch the object from user collection based on uid, edit the
+          parameters of the object and save it in the database.
+        </p>
+
+        <p>You should save the object as below</p>
+
+        <p>&nbsp;</p>
+
+        <table align="left" border="1" cellpadding="1" cellspacing="1">
+          <thead>
+            <tr>
+              <th scope="row">Key</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">_id</th>
+              <td>mongoose.Types.ObjectId()</td>
+            </tr>
+            <tr>
+              <th scope="row">userName</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">pwd</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">mobile</th>
+              <td>Number</td>
+            </tr>
+            <tr>
+              <th scope="row">email</th>
+              <td>string</td>
+            </tr>
+            <tr>
+              <th scope="row">location</th>
+              <td>string</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>You need to edit only received parameter values only.</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>diseases:</strong></p>
+
+        <p>Request method used in this API is GET.</p>
+
+        <p>
+          In this endpoint, you have to query the diseases collections and
+          return the JSON data obtained from MongoDB.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          The diseases data that should be in the "diseases" collection&nbsp;is
+          mentioned below:
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <img
+            height="20"
+            src="https://hrcdn.net/s3_pub/istreet-assets/SvxkmmzuIkNNu7Pi3hbUHg/dssssslkn.png"
+            style="float: left"
+            width="492"
+          />
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>The array can contain any disease name you want.</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>bookAppointment:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          In this endpoint, you will receive request parameters like fname,
+          lname, disease, priority, tentativeDate, patientId, registeredTime.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          You have to save these details in 'appointments' collection in
+          MongoDB.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>The JSON object&nbsp;that should be saved should be as below:</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <img
+            height="198"
+            src="https://hrcdn.net/s3_pub/istreet-assets/3V-loVIyRD7LeEzKJVVA5A/ddss.png"
+            style="float: left"
+            width="408"
+          />
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>fetchAppointment:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          In this endpoint, You have to GET all the appointments from the
+          'appointments' collections.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          The response after querying 'appointments' collection can be as below:
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <img
+            height="270"
+            src="https://hrcdn.net/s3_pub/istreet-assets/HeKGrOpLTrbEIYG3AhA_iA/basjvbasva.png"
+            width="461"
+          />
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          After querying , if there are no appointments, response can be an
+          empty array too.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>deleteAppointment:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          In this endpoint, you will receive an request parameter like
+          appointmentId,
+        </p>
+
+        <p>You have to delete object with id equals to appointmentId.</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          On successful deletion, you have to return an JSON object with
+          'status' as key and&nbsp; "success" as value in response with status
+          code as 200.
+        </p>
+
+        <p>
+          On deletion failed, you have to return an JSON object with 'status' as
+          key and "failure" as value in response with status code 404.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>NOTE:&nbsp;</strong>Every Object in MongoDB has an object id
+          with key as '_id'.
+        </p>
+
+        <p>
+          In this API, received appointmentId is the _id of the object that you
+          need to delete.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>singlePatientAppointments:</strong><strong>&nbsp;</strong>
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          If you remember, in the fetchAppointment API, you fetch all the
+          appointments available in database.
+        </p>
+
+        <p>
+          But in this API you have to fetch a single patient appointment based
+          on the patientId which we store while booking an appointment using
+          bookAppointment API.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>In this API, you receive request parameter like patientId.</p>
+
+        <p>
+          You have to query the 'appointments' collection based on patientId and
+          return the JSON response.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>getProfile:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>In this API, You have send the user details.</p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          You receive request parameters like uid, with which you have to query
+          'user' collection and send the query results as JSON.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong>BUT&nbsp;</strong>&nbsp;the response object shouldn't have the
+          'pwd' property.
+        </p>
+
+        <p>
+          perform operation to delete the property from the response object.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>
+          <strong
+            >Internal Structure of collection and meaning of attributes in
+            MongoDB:</strong
+          >
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p style="text-align: center">
+          <img
+            height="468"
+            src="https://hrcdn.net/s3_pub/istreet-assets/eonElOQf75chbxe1kDIrQA/Untitled%20(2)%20(1).png"
+            width="955"
+          />
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p>While structuring the database models, we consider below factor:</p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>&nbsp; user</strong>:&nbsp;</p>
+
+        <table align="center" border="1" cellpadding="1" cellspacing="1">
+          <tbody>
+            <tr>
+              <td>_id</td>
+              <td>unique ID generated By MongoDB</td>
+            </tr>
+            <tr>
+              <td>userName</td>
+              <td>username of the user</td>
+            </tr>
+            <tr>
+              <td>pwd</td>
+              <td>Password of user</td>
+            </tr>
+            <tr>
+              <td>mobile</td>
+              <td>user's mobile number</td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>email address of user</td>
+            </tr>
+            <tr>
+              <td>location</td>
+              <td>location of user</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>patientDetails</strong>:&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <table align="center" border="1" cellpadding="1" cellspacing="1">
+          <tbody>
+            <tr>
+              <td>_id</td>
+              <td>unique ID generated By MongoDB</td>
+            </tr>
+            <tr>
+              <td>fname</td>
+              <td>firstname of patient</td>
+            </tr>
+            <tr>
+              <td>lname&nbsp;</td>
+              <td>
+                <p>last name of patient</p>
+              </td>
+            </tr>
+            <tr>
+              <td>gender</td>
+              <td>
+                <p>gender of Patient</p>
+              </td>
+            </tr>
+            <tr>
+              <td>dob</td>
+              <td>
+                <p>Date of birth of patient</p>
+              </td>
+            </tr>
+            <tr>
+              <td>mobile</td>
+              <td>phone number of patient</td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>email address of patient</td>
+            </tr>
+            <tr>
+              <td>desc</td>
+              <td>description provided by patient</td>
+            </tr>
+            <tr>
+              <td>userId</td>
+              <td>userId of user who added patient data</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>
+          This model contains 'timestamps' as true, which create createAt and
+          updateAt field in objects which indicates the time at which object is
+          created and updated.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>appointments</strong>:&nbsp;</p>
+
+        <table align="center" border="1" cellpadding="1" cellspacing="1">
+          <tbody>
+            <tr>
+              <td>_id</td>
+              <td>unique ID generated By MongoDB</td>
+            </tr>
+            <tr>
+              <td>fname</td>
+              <td>
+                <p>first name of patient</p>
+              </td>
+            </tr>
+            <tr>
+              <td>lname</td>
+              <td>last name of patient</td>
+            </tr>
+            <tr>
+              <td>disease</td>
+              <td>
+                <p>name of the disease patient has</p>
+              </td>
+            </tr>
+            <tr>
+              <td>priority</td>
+              <td>Priority of patient</td>
+            </tr>
+            <tr>
+              <td>AppointmentDate</td>
+              <td>date of appointment</td>
+            </tr>
+            <tr>
+              <td>patientId</td>
+              <td>Id of patient</td>
+            </tr>
+            <tr>
+              <td>bookingTime</td>
+              <td>Time at which booking is made</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>diseases</strong>:&nbsp;</p>
+
+        <table align="center" border="1" cellpadding="1" cellspacing="1">
+          <tbody>
+            <tr>
+              <td>_id</td>
+              <td>unique ID generated By MongoDB</td>
+            </tr>
+            <tr>
+              <td>diseases</td>
+              <td>Array of diseases</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>IMPORTANT:</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>Middleware:</strong></p>
+
+        <p>You need to create an Middleware to validate the API calls.</p>
+
+        <p>
+          For Middleware, you have to use 'json web token' (jwt) with below
+          rules:
+        </p>
+
+        <p>
+          1) login and registration&nbsp; API endpoint don't need middleware. If
+          login details are validated , you send response with&nbsp; json web
+          token as token parameter.
+        </p>
+
+        <p>
+          2) With obtained token,for every request, the request should have
+          'x-access-token' or 'authorization' as key and token as value.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>Steps to be followed:</strong></p>
+
+        <ul>
+          <li>
+            <strong>Run -&gt; install :&nbsp;</strong>&nbsp;To install all the
+            node modules for both frontend and backend, to install MongoDB and
+            insert dummy data into it
+          </li>
+          <li>
+            <strong>Run -&gt; Run:&nbsp;</strong>To see running application
+          </li>
+          <li>
+            Before running the testcases execute&nbsp;<strong
+              >bash test.sh&nbsp;</strong
+            >from the terminal.
+          </li>
+          <li>
+            <strong>Run -&gt; Test:&nbsp;</strong>To see results of testing the
+            API and react behaviour as expected
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

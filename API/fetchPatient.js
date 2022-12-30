@@ -5,6 +5,4 @@ let jwt = require("jsonwebtoken");
 let config = require("../config");
 const mongo = require("mongodb").MongoClient;
 
-module.exports = function (req, res) {
-  /*write your code here*/
-};
+module.exports = function (req, res) {};
